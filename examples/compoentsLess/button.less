@@ -1,0 +1,130 @@
+
+//这里disabled 能覆盖active hover 貌似跟顺序有关?
+.m-button {
+  display: inline-block;
+  box-sizing: border-box;
+  line-height: 1;
+  outline: none;
+  border: none;
+  transition: 0.1s;
+  font-size: 0;
+  padding: 12px 20px;
+  border-radius: @radiusPrimary;
+  border: 1px solid #dcdfe6;
+  cursor: pointer;
+
+  &.is-circle{
+    padding: 12px;
+    border-radius: 50%;
+  }
+
+  &--text_default{
+    color: #333333;
+    border: 0;
+    background: none;
+    padding: 0;
+    &:hover {
+      color: #666666;
+    }
+    &:active {
+      color: #000;
+    }
+    
+    &.is-disabled {
+      cursor: not-allowed;
+      color: #999999;
+    }
+  }
+
+  &.is-round{
+    border-radius: 20px;
+  }
+
+  [class*="m-vue-"] + span {
+    margin-left: 5px;
+  }
+
+  >span {
+    font-size: @font-size-medium;
+  }
+
+  & + .m-button {
+    margin-left: 10px;
+  }
+  
+  &--default {
+    color: #333333;
+    background-color: @default;
+
+    &:hover {
+      color: #409eff;
+      border-color: @default-hover;
+      background-color: @default-hover;
+    }
+
+    &:active {
+      color: #409eff;
+      border-color: @default-active;
+      background-color: @default-hover;
+    }
+
+    &.is-disabled {
+      cursor: not-allowed;
+      border-color: @default-disabled;
+      color: #c0c4cc;
+      background-color: transparent;
+    }
+  }
+}
+
+
+
+each(@typeEnum,.(@v,@k){
+  @value:extract(@typeEnumVar,@k);
+  @hover:extract(@hoverEnumVar,@k);
+  @disabled:extract(@disabledEnumVar,@k);
+  @active:extract(@activeEnumVar,@k);
+  .m-button--text_@{v}{
+    color: @value;
+    border: 0;
+    background: none;
+    padding: 0;
+    &:hover{
+      color:@hover;
+    }
+    &:active{
+      color: @active;
+    }
+    &.is-disabled{
+      cursor:not-allowed;
+      color: @disabled;
+    }
+  }
+  .m-button--@{v}{
+    background-color:@value;
+    color: #fff;
+    border: none;
+    &:hover{
+      background-color:@hover;
+    }
+    &:active{
+      background-color: @active;
+    }
+    &.is-disabled{
+      cursor:not-allowed;
+     // color: #c0c4cc;
+      background-color: @disabled;
+    }
+  }
+});
+
+each(@sizeEnum,.(@v,@k){
+  @size:extract(@sizeEnumVar,@k);
+  @pading:extract( @buttonPadingEnumVar,@k);
+  .m-button--@{v}{
+    padding: @pading;
+    span{
+      font-size: @size;
+    }
+  }
+});

@@ -7,7 +7,7 @@
 
 <script lang="ts">
 import { defineComponent } from 'vue'
-import MButtonText from '../mdir/button/MButtonTest.vue'
+import MButtonText from '../mdir/button/buttonTest.vue'
 
 export default defineComponent({
   components: {

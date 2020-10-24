@@ -5,34 +5,49 @@
 @danger:#F56C6C;
 @info:#909399;
 @default:#fff;
+@default-hover:#ecf5ff;
+@default-disabled:#c0c4cc;
 //枚举颜色 
 @typeEnumVar:@primary,@success,@warning,@danger,@info;
 
 //hover颜色 
-@primary-hover:#66b1ff;
-@success-hover:#85ce61;
-@warning-hover:#ebb563;
-@danger-hover:#f78989;
-@info-hover:#a6a9ad;
-@default-hover:#ecf5ff;
+@primary-hover:lighten(@primary,10%);
+@success-hover:lighten(@success,10%);
+@warning-hover:lighten(@warning,10%);
+@danger-hover:lighten(@danger,10%);
+@info-hover:lighten(@info,10%);
+
 //hover枚举颜色 
-@hoverEnumvar:@primary-hover,@success-hover,@warning-hover,@danger-hover,@info-hover;
+@hoverEnumVar:@primary-hover,@success-hover,@warning-hover,@danger-hover,@info-hover;
+
+//激活颜色
+@primary-active:darken(@primary,5%);
+@success-active:darken(@success,5%);
+@warning-active:darken(@warning,5%);
+@danger-active:darken(@danger,5%);
+@info-active:darken(@info,5%);
+@default-active:@primary;
+//激活枚举
+@activeEnumVar:@primary-active,@success-active,@warning-active,@danger-active,@info-active,@default-active;
+
 
 //状态枚举 
 @typeEnum:primary,success,warning,danger,info;
+
 //大小枚举 
 @sizeEnum:medium,small,mini;
 
 //disabled颜色
-@parmay-disabled:#a0cfff;
-@success-disabled:#b3e19d;
-@info-disabled:#c8c9cc;
-@warning-disabled:#f3d19e;
-@danger-disabled:#fab6b6;
-@default-disabled:#c0c4cc;
+@parmay-disabled:lighten(@primary,20%);
+@success-disabled:lighten(@success,20%);
+@info-disabled:lighten(@warning,20%);
+@warning-disabled:lighten(@danger,20%);
+@danger-disabled:lighten(@info,20%);
+
 
 //disabled枚举
 @disabledEnumVar:@parmay-disabled,@success-disabled,@info-disabled,@warning-disabled,@danger-disabled;
+
 
 
 //字体大小
@@ -42,8 +57,8 @@
 //字体大小枚举
 @sizeEnumVar:@font-size-medium,@font-size-small,@font-size-mini;
 
-
-
+//普通圆角
+@radiusPrimary:4px;
 
 //按钮padding
 @button-pading-medium:12px 20px;
