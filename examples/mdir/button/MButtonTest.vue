@@ -16,7 +16,7 @@
     <div class="cell-row">
       <h3>状态</h3>
       <m-button>默认按钮</m-button>
-      <m-button type="primary" @click="showMessage">普通按钮</m-button>
+      <m-button type="primary" @click="showMessage">点我触发console.log</m-button>
       <m-button type="success">成功按钮</m-button>
       <m-button type="info">信息按钮</m-button>
       <m-button type="warning">警告按钮</m-button>
@@ -72,9 +72,10 @@ export default defineComponent({
     MButton
   },
   setup () {
-    const showMessage = () => {
+    const showMessage = (e:MouseEvent) => {
       // eslint-disable-next-line no-alert
-      alert('触发点击')
+      console.log(e, '触发点击')
+      // alert('触发点击')
     }
 
     return {

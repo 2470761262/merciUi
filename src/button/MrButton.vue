@@ -37,12 +37,13 @@ export default defineComponent({
     }
   },
   emits: {
-    click: () => true
+    click: (event:MouseEvent) => event
   },
   setup (props, ctx) {
-    const emitClick = () => {
+    const emitClick = (e:MouseEvent) => {
       if (props.disabled || props.loading) return
-      ctx.emit('click')
+
+      ctx.emit('click', e)
     }
     return {
       emitClick
