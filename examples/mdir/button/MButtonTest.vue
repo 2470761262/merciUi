@@ -14,7 +14,7 @@
 <template>
   <div class="content">
     <div class="cell-row">
-      <h3>样式</h3>
+      <h3>状态</h3>
       <m-button>默认按钮</m-button>
       <m-button type="primary" @click="showMessage">普通按钮</m-button>
       <m-button type="success">成功按钮</m-button>
