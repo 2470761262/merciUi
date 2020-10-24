@@ -1,0 +1,70 @@
+.m-button {
+  display: inline-block;
+  box-sizing: border-box;
+  line-height: 1;
+  outline: none;
+  border: none;
+  transition: 0.1s;
+  font-size: 0;
+  [class*="m-vue-"] + span{
+      margin-left: 5px;
+  }
+  span{
+    font-size: @font-size-medium;
+  }
+  padding: 12px 20px;
+  border-radius: 4px;
+  border: 1px solid #dcdfe6;
+  cursor: pointer;
+  &:hover{
+    color: #409eff;
+    border-color: @default-hover;
+    background-color: @default-hover;
+  }
+  &+.m-button{
+    margin-left: 10px;
+  }
+  &--default {
+    color: #333333;
+    background-color: @default;
+
+    &.is-disabled{
+      cursor:not-allowed;
+      border-color: @default-disabled;
+      color: #c0c4cc;
+      background-color:transparent;
+    }
+  }
+}
+
+each(@typeEnum,.(@v,@k){
+  @value:extract(@typeEnumVar,@k);
+  @house:extract(@hoverEnumvar,@k);
+  @disabled:extract(@disabledEnumVar,@k); 
+  .m-button--@{v}{
+    background-color:@value;
+    color: #fff;
+    border: none;
+    &:hover{
+      background-color:@house;
+      color: #fff;
+    }
+    &.is-disabled{
+      cursor:not-allowed;
+     // color: #c0c4cc;
+      background-color: @disabled;
+    }
+  }
+});
+
+
+each(@sizeEnum,.(@v,@k){
+  @size:extract(@sizeEnumVar,@k);
+  @pading:extract( @buttonPadingEnumVar,@k);
+  .m-button--@{v}{
+    padding: @pading;
+    span{
+      font-size: @size;
+    }
+  }
+});
