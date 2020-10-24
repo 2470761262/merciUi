@@ -76,6 +76,7 @@ export default defineComponent({
       // eslint-disable-next-line no-alert
       alert('触发点击')
     }
+
     return {
       showMessage
     }
