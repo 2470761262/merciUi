@@ -2,7 +2,7 @@
 
 基础的按钮用法。
 
-:::demo 设置 type 为对应的状态即可
+:::demo 设置 type 为对应的状态即可 默认 default
 
 ```html
 <m-button>默认按钮</m-button>
@@ -193,12 +193,12 @@
 
 ### Attributes
 
-| 参数     | 说明           | 类型    | 可选值                                      | 默认值 |
-| -------- | -------------- | ------- | ------------------------------------------- | ------ |
-| size     | 尺寸           | string  | medium / small / mini                       | —      |
-| type     | 类型           | string  | primary / success / warning / danger / info | —      |
-| round    | 是否圆角按钮   | boolean | —                                           | false  |
-| circle   | 是否圆形按钮   | boolean | —                                           | false  |
-| loading  | 是否加载中状态 | boolean | —                                           | false  |
-| disabled | 是否禁用状态   | boolean | —                                           | false  |
-| text     | 是否使用文本   | boolean | -                                           | false  |
+| 参数     | 说明           | 类型    | 可选值                                               | 默认值  |
+| -------- | -------------- | ------- | ---------------------------------------------------- | ------- |
+| size     | 尺寸           | string  | medium / small / mini                                | —       |
+| type     | 类型           | string  | primary / success / warning / danger / info /default | default |
+| round    | 是否圆角按钮   | boolean | —                                                    | false   |
+| circle   | 是否圆形按钮   | boolean | —                                                    | false   |
+| loading  | 是否加载中状态 | boolean | —                                                    | false   |
+| disabled | 是否禁用状态   | boolean | —                                                    | false   |
+| text     | 是否使用文本   | boolean | -                                                    | false   |
