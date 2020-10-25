@@ -28,7 +28,6 @@
   },
   "exclude": ["node_modules"],
   "include": [
-    //读取src目录下的所有文件
     "./src/**/*",
     "./examples/**/*",
     "./typs"

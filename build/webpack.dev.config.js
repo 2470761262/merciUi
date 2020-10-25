@@ -21,7 +21,7 @@ module.exports = merge(webpackBaseConfig, {
         enforce: 'pre',
         test: /\.(vue|jsx?)$/,
         exclude: /node_modules/,
-        loader: 'eslint-loader'
+       // loader: 'eslint-loader'
       },
       {
         test: /\.vue$/,
@@ -31,7 +31,24 @@ module.exports = merge(webpackBaseConfig, {
             preserveWhitespace: false
           }
         }
-      }]
+      },
+      {
+        test: /\.md$/,
+        use: [
+          {
+            loader: 'vue-loader',
+            options: {
+              compilerOptions: {
+                preserveWhitespace: false
+              }
+            }
+          },
+          {
+            loader: path.resolve(__dirname, './md-loader/index.js')
+          }
+        ]
+      }
+    ]
   },
   // 输出
   output: {

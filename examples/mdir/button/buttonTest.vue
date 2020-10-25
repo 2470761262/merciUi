@@ -1,32 +1,18 @@
 <style lang="less" scpoed>
-.content {
-  padding: 0px 20px;
-  h2 {
-    font-size: 28px;
-    color: #1f2f3d;
-    font-weight: 400;
-  }
-  h6 {
-    font-size: 14px;
-    color: #5e6d82;
-    margin: 10px 0;
-    font-weight: 400;
-  }
-  .cell-row {
-    margin-top: 50px;
-    h3 {
-      margin-bottom: 15px;
-      font-weight: 400;
-      color: #1f2f3d;
+ .text-content{
+    padding: 0px 20px;
+    h3{
+      margin: 40px  0 20px;
     }
-    h6 {
+    p{
       margin-bottom: 20px;
+      color: #5e6d82;
+      font-size: 14px;
     }
   }
-}
 </style>
 <template>
-  <div class="content">
+  <!-- <div class="content">
     <h2>Button 按钮</h2>
     <h6>常用的操作按钮</h6>
     <div class="cell-row">
@@ -149,35 +135,23 @@
         <m-button type="primary">下一页</m-button>
       </m-button-group>
     </div>
+  </div> -->
+  <div class="text-content">
+     <button-md></button-md>
   </div>
 </template>
 
 <script lang="ts">
 import { defineComponent, ref } from 'vue'
 
-import MButton from '../../../src/button/button.vue'
-import MButtonGroup from '../../../src/button/buttonGroup.vue'
+import buttonMd from '../../docs/button.md'
 
 export default defineComponent({
   name: 'MButtonTest',
   components: {
-    MButton,
-    MButtonGroup
+    buttonMd
   },
   setup () {
-    const showMessage = (e: MouseEvent) => {
-      console.log(e, '触发点击')
-    }
-    const isLoading = ref(true)
-
-    const changeLoading = () => {
-      isLoading.value = !isLoading.value
-    }
-    return {
-      showMessage,
-      isLoading,
-      changeLoading
-    }
   }
 })
 </script>
