@@ -136,7 +136,7 @@
       </m-button-group>
     </div>
   </div> -->
-  <div class="text-content">
+  <div class="text-content page-component">
      <button-md></button-md>
   </div>
 </template>

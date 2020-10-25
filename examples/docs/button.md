@@ -109,7 +109,7 @@
 
 ### 带 Icon
 
-内置的 icon 图标
+带图标的按钮可增强辨识度（有文字）或节省空间（无文字）。
 :::demo prefix 前置插槽 suffix 后置插槽 可同时使用
 
 ```html
@@ -176,7 +176,7 @@
 
 :::demo 以按钮组的方式出现，常用于多项类似操作。
 
-```html
+```html 使用<m-button-group>标签来嵌套你的按钮。
 <m-button-group>
   <m-button type="primary">JEX的歌好好听阿</m-button>
   <m-button type="success">成功按钮</m-button>
@@ -190,3 +190,15 @@
 ```
 
 :::
+
+### Attributes
+
+| 参数     | 说明           | 类型    | 可选值                                      | 默认值 |
+| -------- | -------------- | ------- | ------------------------------------------- | ------ |
+| size     | 尺寸           | string  | medium / small / mini                       | —      |
+| type     | 类型           | string  | primary / success / warning / danger / info | —      |
+| round    | 是否圆角按钮   | boolean | —                                           | false  |
+| circle   | 是否圆形按钮   | boolean | —                                           | false  |
+| loading  | 是否加载中状态 | boolean | —                                           | false  |
+| disabled | 是否禁用状态   | boolean | —                                           | false  |
+| text     | 是否使用文本   | boolean | -                                           | false  |
