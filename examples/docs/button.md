@@ -172,11 +172,13 @@
 
 :::
 
+
 ### 按钮组
 
-:::demo 以按钮组的方式出现，常用于多项类似操作。
+以按钮组的方式出现，常用于多项类似操作。
+:::demo 使用`<m-button-group>`标签来嵌套你的按钮。
 
-```html 使用<m-button-group>标签来嵌套你的按钮。
+```html
 <m-button-group>
   <m-button type="primary">JEX的歌好好听阿</m-button>
   <m-button type="success">成功按钮</m-button>
@@ -190,6 +192,7 @@
 ```
 
 :::
+
 
 ### Attributes
 
