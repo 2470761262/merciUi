@@ -18,7 +18,7 @@
 ### 圆形
 
 常用与一个图标,多文本不推荐。
-:::demo 本例包含 Icon 图标使用示例
+:::demo 本例包含 icon 图标使用示例，内置图标都为 m-vue 命名，图标都长啥样，你猜名字吧，暂时懒得显示给 icon 专门显示了。
 
 ```html
 <m-button circle>
@@ -50,26 +50,10 @@
 
 :::
 
-### disabled
-
-禁用状态。
-:::demo 按钮不可用状态。
-
-```html
-<m-button disabled>默认按钮</m-button>
-<m-button type="primary" disabled>普通按钮</m-button>
-<m-button type="success" disabled>成功按钮</m-button>
-<m-button type="info" disabled>信息按钮</m-button>
-<m-button type="warning" disabled>警告按钮</m-button>
-<m-button type="danger" disabled>危险按钮</m-button>
-```
-
-:::
-
 ### 圆角
 
 你喜欢的圆角。
-:::demo round
+:::demo `round` 设置圆角按钮
 
 ```html
 <m-button round>默认按钮</m-button>
@@ -84,7 +68,7 @@
 ### 文字按钮
 
 没有边框和背景色的按钮。
-:::demo text
+:::demo `text` 设置为文本，并不在 `type` 属性中
 
 ```html
 <m-button text disabled>默认按钮</m-button>
@@ -97,7 +81,7 @@
 ### 大小
 
 大中小,默认大
-:::demo medium 大 small 中 mini 小
+:::demo `medium` 大 `small` 中 `mini` 小
 
 ```html
 <m-button type="primary" size="medium">普通按钮</m-button>
@@ -110,7 +94,7 @@
 ### 带 Icon
 
 带图标的按钮可增强辨识度（有文字）或节省空间（无文字）。
-:::demo prefix 前置插槽 suffix 后置插槽 可同时使用
+:::demo `prefix` 前置插槽 `suffix` 后置插槽 可同时使用
 
 ```html
 <m-button size="medium">
@@ -131,6 +115,22 @@
     <i class="m-vue m-vue-operation"></i>
   </template>
 </m-button>
+```
+
+:::
+
+### disabled
+
+禁用状态。
+:::demo `disabled` 设置按钮为不可用状态。
+
+```html
+<m-button disabled>默认按钮</m-button>
+<m-button type="primary" disabled>普通按钮</m-button>
+<m-button type="success" disabled>成功按钮</m-button>
+<m-button type="info" disabled>信息按钮</m-button>
+<m-button type="warning" disabled>警告按钮</m-button>
+<m-button type="danger" disabled>危险按钮</m-button>
 ```
 
 :::
@@ -172,7 +172,6 @@
 
 :::
 
-
 ### 按钮组
 
 以按钮组的方式出现，常用于多项类似操作。
@@ -192,7 +191,6 @@
 ```
 
 :::
-
 
 ### Attributes
 
