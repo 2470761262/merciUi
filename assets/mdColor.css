@@ -11,6 +11,8 @@ Ported by FabrÃ­cio Tavares de Oliveira
   overflow-x: auto;
   padding: 0.5em;
   background: #fff;
+  font-size: 12px;
+  line-height: 1.8;
 }
 
 .hljs,
