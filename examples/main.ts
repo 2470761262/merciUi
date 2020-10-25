@@ -1,19 +1,25 @@
-
-import { createApp } from 'vue'
-import App from './app.vue'
-import {router} from './router/router';
+import { createApp } from "vue";
+import App from "./app.vue";
+import { router } from "./router/router";
 import "../assets/init.css";
 import "./compoentsLess/index.less";
 import "../assets/fontIcon.css";
 import "../assets/mdColor.css";
-import demoBlock from './component/demoBlock.vue';
-import {button,buttonGroup} from '../src/index';
-const app =   createApp(App);
+import demoBlock from "./component/demoBlock.vue";
+import * as merci from "../src/index";
+import notify from '../src/notify/notification.js';
 
-app.component("demo-block",demoBlock);
-app.component(button.name,button);
-app.component(buttonGroup.name,buttonGroup);
+
+const app = createApp(App);
 
 app.use(router);
 
-app.mount('#app')
+app.config.globalProperties.$notify = notify;
+app.component("demo-block", demoBlock);
+
+
+Object.keys(merci).forEach((key) => {
+  app.component(merci[key].name, merci[key]);
+});
+
+app.mount("#app");

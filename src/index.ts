@@ -3,5 +3,5 @@ import buttonGroup from './button/buttonGroup.vue';
 
 export{
   button,
-  buttonGroup
+  buttonGroup,
 }
