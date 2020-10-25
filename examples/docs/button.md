@@ -141,34 +141,31 @@
 
 ```html
 <template>
-<m-button type="primary" size="medium" :loading="isLoading">
-  <template v-slot:prefix>
-    <i class="m-vue m-vue-smile-filling"></i>
-  </template>
- {{isLoading ? "我在转圈" :"吓你一跳"}}
-</m-button>
-<m-button type="primary" size="medium" @click="handleChange">
- 点我切换loading状态
-</m-button>
+  <m-button type="primary" size="medium" :loading="isLoading">
+    <template v-slot:prefix>
+      <i class="m-vue m-vue-smile-filling"></i>
+    </template>
+    {{isLoading ? "我在转圈" :"吓你一跳"}}
+  </m-button>
+  <m-button type="primary" size="medium" @click="handleChange">
+    点我切换loading状态
+  </m-button>
 </template>
 <script>
   import { ref } from "vue";
   export default {
-    setup(){
+    setup() {
       const isLoading = ref(true);
 
-      const handleChange = ()=>{
-        
-         isLoading.value = !isLoading.value;
-
-      }
+      const handleChange = () => {
+        isLoading.value = !isLoading.value;
+      };
 
       return {
         isLoading,
-        handleChange
-      }
+        handleChange,
+      };
     },
-
   };
 </script>
 ```
