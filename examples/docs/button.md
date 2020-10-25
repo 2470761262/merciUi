@@ -140,13 +140,37 @@
 :::demo loading 设置 `true` or `false` 即可
 
 ```html
-<m-button type="primary" size="medium" :loading="true">
+<template>
+<m-button type="primary" size="medium" :loading="isLoading">
   <template v-slot:prefix>
     <i class="m-vue m-vue-smile-filling"></i>
   </template>
- 吓你一跳
+ {{isLoading ? "我在转圈" :"吓你一跳"}}
 </m-button>
+<m-button type="primary" size="medium" @click="handleChange">
+ 点我切换loading状态
+</m-button>
+</template>
+<script>
+  import { ref } from "vue";
+  export default {
+    setup(){
+      const isLoading = ref(true);
 
+      const handleChange = ()=>{
+        
+         isLoading.value = !isLoading.value;
+
+      }
+
+      return {
+        isLoading,
+        handleChange
+      }
+    },
+
+  };
+</script>
 ```
 
 :::
